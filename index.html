@@ -1,1 +1,124 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>صفحتي الشخصيّة</title>
+  <style>
+    /* 1. نجعل الصفحة تأخذ كامل الشاشة */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      color: #fff;
+      text-align: center;
+    }
 
+    /* 2. الخلفية: عرض الصورة كاملة بدون تراكب */
+    body {
+      background: 
+        url("profile.jpg") no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* 3. تصفيف الصورة الشخصية (مربع دائري بجانب الاسم) */
+    .profile-photo {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 3px solid rgba(255, 255, 255, 0.7);
+      object-fit: cover;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    /* 4. تصفيف العنوان (اسمك) */
+    h1 {
+      font-size: 2.5em;
+      margin: 0.2em 0 0.1em 0;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+    }
+
+    /* 5. فقرة المعلومات الشخصية (المسمّى الوظيفي والبريد الإلكتروني) */
+    .info {
+      font-size: 1em;
+      margin-bottom: 0.8em;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+      line-height: 1.4;
+    }
+
+    /* 6. صندوق الروابط (Container) */
+    .links-container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 0.5em;
+      width: 90%;
+      max-width: 380px;
+    }
+
+    /* 7. تصفيف الأزرار (روابط الحسابات) */
+    .link-button {
+      display: block;
+      padding: 12px 20px;
+      background-color: rgba(255, 255, 255, 0.15);
+      border: 2px solid rgba(255, 255, 255, 0.4);
+      border-radius: 8px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.1em;
+      transition: background-color 0.3s, border-color 0.3s;
+    }
+
+    .link-button:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+      border-color: rgba(255, 255, 255, 0.8);
+    }
+  </style>
+</head>
+<body>
+  <!-- 1. صورة الملف الشخصي -->
+  <img class="profile-photo" src="profile.jpg" alt="صورة حسين محمد" />
+
+  <!-- 2. اسمك وعرضه -->
+  <h1>حسين محمد | Hussein Mohammed</h1>
+
+  <!-- 3. معلومات شخصية إضافية -->
+  <div class="info">
+    <div>مطور ويب ومهتم بالأمن السيبراني</div>
+    <div>بابل ، العراق</div>
+    <div>البريد الإلكتروني : <a href="hussein167k@gmail.com" style="color: #fff; text-decoration: underline;">hussein167k@gmail.com</a></div>
+  </div>
+
+  <!-- 4. حاوية الروابط -->
+  <div class="links-container">
+    <!-- الإنستغرام أولاً -->
+    <a class="link-button" href="https://www.instagram.com/t8ocn" target="_blank">
+      إنستغرام
+    </a>
+
+    <!-- رابط تليجرام -->
+    <a class="link-button" href="https://t.me/t8ocn" target="_blank">
+      تليجرام
+    </a>
+
+    <!-- رابط واتساب (يفتح دردشة مباشرة) -->
+    <a class="link-button" href="https://wa.me/9647702750966" target="_blank">
+      واتساب
+    </a>
+
+    <!-- رقم الهاتف بشكل صحيح -->
+    <a class="link-button" href="tel:+9647702750966">
+      +9647702750966 : الاتصال
+    </a>
+    <a class="link-button" href="tel:+9647835599507">
+      +9647835599507 : الاتصال
+    </a>
+  </div>
+</body>
+</html>
